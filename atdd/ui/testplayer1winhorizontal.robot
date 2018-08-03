@@ -32,7 +32,7 @@ Player 1 (X) ชนะ แนวนอน แถวล่าง
   Player 2 (O) คลิกช่อง R2,C2
   Player 1 (X) คลิกช่อง R3,C2
   Player 2 (O) คลิกช่อง R1,C1
-  Player 1 (X) คลิกช่อง R3,C2
+  Player 1 (X) คลิกช่อง R3,C3
   แสดงคะแนน Player 1 เป็น 1
   ปิดหน้าเว็บ
   
