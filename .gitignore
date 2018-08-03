@@ -1,0 +1,5 @@
+build
+atdd/ui/selenium-screenshot*
+atdd/ui/log.html
+atdd/ui/output.xml
+atdd/ui/report.html
