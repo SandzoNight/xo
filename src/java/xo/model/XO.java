@@ -78,6 +78,10 @@ public class XO {
     public void markField(int row, int col) {
         board[row][col] = currentPlayer;
     }
+  
+    public void setTurnToZero() {
+       this.turn=0;
+    }
     
     public void createEmptyBoard() {
         this.board = new String[3][3];
