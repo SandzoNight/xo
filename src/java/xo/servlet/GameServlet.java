@@ -43,7 +43,7 @@ public class GameServlet extends HttpServlet {
         if (game.checkHorizontalWin()) {
             game.increasePlayerScore();
             game.setTurnToZero();
-            game.createEmptyBoard();
+//            game.createEmptyBoard();
             game.setCurrentPlayer("X");
             getServletContext().getRequestDispatcher("/index.jsp").forward(request, response);
         }
