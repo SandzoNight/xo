@@ -17,6 +17,10 @@ public class XO {
     private String[][] board;
     private String currentPlayer;
 
+    public XO() {
+    }
+
+    
     public int getPlayer1Score() {
         return player1Score;
     }
