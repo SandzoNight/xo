@@ -81,4 +81,8 @@ public class XO {
             setCurrentPlayer("X");
         }
     }
+
+    public void increseTurn() {
+        this.turn += 1;
+    }
 }
