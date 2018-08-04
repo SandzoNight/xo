@@ -64,4 +64,13 @@ public class XO {
     public void setCurrentPlayer(String currentPlayer) {
         this.currentPlayer = currentPlayer;
     }
+    
+    public boolean checkHorizontalWin() {
+        for(int i=0;i<3;i++) {
+            if(this.board[i][0] != null && this.board[i][0].equals(this.board[i][1]) && this.board[i][1].equals(this.board[i][2])) {
+                return true;
+            }
+        }
+        return false;
+    }
 }
