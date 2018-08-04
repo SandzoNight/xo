@@ -5,12 +5,11 @@
  */
 package xo.test;
 
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
+import java.util.HashSet;
+import java.util.Set;
 import org.junit.Test;
-import static org.junit.Assert.*;
+import org.junit.Assert;
+import xo.model.XO;
 
 /**
  *
@@ -21,25 +20,36 @@ public class TestIncreasePlayer {
     public TestIncreasePlayer() {
     }
     
-    @BeforeClass
-    public static void setUpClass() {
-    }
     
-    @AfterClass
-    public static void tearDownClass() {
-    }
-    
-    @Before
-    public void setUp() {
-    }
-    
-    @After
-    public void tearDown() {
-    }
 
     // TODO add test methods here.
     // The methods must be annotated with annotation @Test. For example:
     //
     // @Test
     // public void hello() {}
+    @Test
+    public void player1ScoreMustBeIncrease() {
+        XO game = new XO();
+        game.setCurrentPlayer("X");
+        game.setPlayer1Score(0);
+        game.setPlayer2Score(2);
+ 
+        game.increasePlayerScore();
+        
+        Assert.assertEquals(1, game.getPlayer1Score());
+        Assert.assertEquals(2, game.getPlayer2Score());
+    }
+    
+    @Test
+    public void player2ScoreMustBeIncrease(){
+        XO game = new XO();
+        game.setCurrentPlayer("O");
+        game.setPlayer1Score(1);
+        game.setPlayer2Score(2);
+        
+        game.increasePlayerScore();
+        
+        Assert.assertEquals(1, game.getPlayer1Score());
+        Assert.assertEquals(3, game.getPlayer2Score());
+    }
 }
