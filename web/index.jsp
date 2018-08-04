@@ -18,64 +18,65 @@
                 <h1>Tic-Tac-Toe</h1>
             </div>
             <div class="board">
-                <form method="post" action="/doge/Game">
+                <form method="post" action="/doge/Game" id="form">
+                    <input type="hidden" id="hiddenField" name="choose">
                     <table class="table">
                         <tr>
-                            <td class="mark" id="R1_C1">
+                            <td class="mark" id="R1_C1" ${ game.board[0][0] == null ? "onclick='clickChoose(\"00\")'" : "" }>
                                 ${game.board[0][0] == null
-                                  ? '<button name="choose" value="00" type="submit">เลือก</button>'
+                                  ? ''
                                   : game.board[0][0]
                                 }
                             </td>
-                            <td class="mark" id="R1_C2">
+                            <td class="mark" id="R1_C2" ${ game.board[0][1] == null ? "onclick='clickChoose(\"01\")'" : "" }>
                                 ${game.board[0][1] == null
-                                  ? '<button name="choose" value="01" type="submit">เลือก</button>'
+                                  ? ''
                                   : game.board[0][1]
                                 }
                             </td>
-                            <td class="mark" id="R1_C3">
+                            <td class="mark" id="R1_C3" ${ game.board[0][2] == null ? "onclick='clickChoose(\"02\")'" : "" }>
                                 ${game.board[0][2] == null
-                                  ? '<button name="choose" value="02" type="submit">เลือก</button>'
+                                  ? ''
                                   : game.board[0][2]
                                 }
                             </td>
                         </tr>
                         <tr>
-                            <td class="mark" id="R2_C1">
+                            <td class="mark" id="R2_C1" ${ game.board[1][0] == null ? "onclick='clickChoose(\"10\")'" : "" }>
                                 ${game.board[1][0] == null
-                                  ? '<button name="choose" value="10" type="submit">เลือก</button>'
+                                  ? ''
                                   : game.board[1][0]
                                 }
                             </td>
-                            <td class="mark" id="R2_C2">
+                            <td class="mark" id="R2_C2" ${ game.board[1][1] == null ? "onclick='clickChoose(\"11\")'" : "" }>
                                 ${game.board[1][1] == null
-                                  ? '<button name="choose" value="11" type="submit">เลือก</button>'
+                                  ? ''
                                   : game.board[1][1]
                                 }
                             </td>
-                            <td class="mark" id="R2_C3">
+                            <td class="mark" id="R2_C3" ${ game.board[1][2] == null ? "onclick='clickChoose(\"12\")'" : "" }>
                                 ${game.board[1][2] == null
-                                  ? '<button name="choose" value="12" type="submit">เลือก</button>'
+                                  ? ''
                                   : game.board[1][2]
                                 }
                             </td>
                         </tr>
                         <tr>
-                            <td class="mark" id="R3_C1">
+                            <td class="mark" id="R3_C1" ${ game.board[2][0] == null ? "onclick='clickChoose(\"20\")'" : "" }>
                                 ${game.board[2][0] == null
-                                  ? '<button name="choose" value="20" type="submit">เลือก</button>'
+                                  ? ''
                                   : game.board[2][0]
                                 }
                             </td>
-                            <td class="mark" id="R3_C2">
+                            <td class="mark" id="R3_C2" ${ game.board[2][1] == null ? "onclick='clickChoose(\"21\")'" : "" }>
                                 ${game.board[2][1] == null
-                                  ? '<button name="choose" value="21" type="submit">เลือก</button>'
+                                  ? ''
                                   : game.board[2][1]
                                 }
                             </td>
-                            <td class="mark" id="R3_C3">
+                            <td class="mark" id="R3_C3" ${ game.board[2][2] == null ? "onclick='clickChoose(\"22\")'" : "" }>
                                 ${game.board[2][2] == null
-                                  ? '<button name="choose" value="22" type="submit">เลือก</button>'
+                                  ? ''
                                   : game.board[2][2]
                                 }
                             </td>
@@ -98,5 +99,11 @@
                 </div>
             </div>
         </div>
+        <script>
+            function clickChoose(choose) {
+                document.getElementById("hiddenField").value = choose
+                document.getElementById("form").submit()
+            }
+        </script>
     </body>
 </html>
