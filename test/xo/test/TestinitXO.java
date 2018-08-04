@@ -14,17 +14,17 @@ import static org.junit.Assert.*;
  * @author User
  */
 public class TestinitXO {
-    
+
     public TestinitXO() {
     }
+
     @Test
-    public void testInitXO(){
+    public void testInitXO() {
         XO xo = new XO();
         assertEquals(0, xo.getPlayer1Score());
         assertEquals(0, xo.getPlayer2Score());
         assertEquals(0, xo.getTieScore());
-    } 
-    
+    }
 
     // TODO add test methods here.
     // The methods must be annotated with annotation @Test. For example:
