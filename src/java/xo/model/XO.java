@@ -66,6 +66,10 @@ public class XO {
         this.currentPlayer = currentPlayer;
     }
     
+    public void createEmptyBoard() {
+        this.board = new String[3][3];
+    }
+  
     public boolean checkHorizontalWin() {
         for(int i=0;i<3;i++) {
             if(this.board[i][0] != null && this.board[i][0].equals(this.board[i][1]) && this.board[i][1].equals(this.board[i][2])) {
@@ -74,6 +78,7 @@ public class XO {
         }
         return false;
     }
+  
     public void increasePlayerScore() {
         if (currentPlayer == "X") {
             player1Score++;
