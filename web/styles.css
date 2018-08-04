@@ -63,10 +63,14 @@ table tr th:last-child {
 .mark {
     width: 100px;
     height: 100px;
+    color: #FFF;
+    text-align: center;
+    font-size: 48px;
     /*border: #FFF solid 1px;*/
 }
 
 .score {
+    margin-top: 40px;
     display: flex;
     flex: 1;
     flex-direction: row;
@@ -79,4 +83,7 @@ table tr th:last-child {
     flex-direction: column;
     text-align: center;
     color: #FFF;
+}
+.player div:first-child {
+    font-size: 20px;
 }
