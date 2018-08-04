@@ -10,6 +10,7 @@ package xo.model;
  * @author sgnsys3
  */
 public class XO {
+
     private int player1Score;
     private int player2Score;
     private int tieScore;
@@ -72,5 +73,24 @@ public class XO {
             }
         }
         return false;
+    }
+    public void increasePlayerScore() {
+        if (currentPlayer == "X") {
+            player1Score++;
+        } else {
+            player2Score++;
+        }
+    }
+  
+    public void nextPlayer() {
+        if (this.currentPlayer.equals("X")) {
+            setCurrentPlayer("O");
+        } else {
+            setCurrentPlayer("X");
+        }
+    }
+
+    public void increseTurn() {
+        this.turn += 1;
     }
 }
