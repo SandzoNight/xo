@@ -18,6 +18,15 @@ public class XO {
     private String[][] board;
     private String currentPlayer;
 
+    public XO() {
+        this.player1Score = 0;
+        this.player2Score = 0;
+        this.tieScore = 0;
+        this.turn = 0;
+        this.currentPlayer = "X";
+        createEmptyBoard();
+    }
+
     public int getPlayer1Score() {
         return player1Score;
     }
