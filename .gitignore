@@ -1,3 +1,5 @@
+nbproject/private
+.DS_Store
 build
 atdd/ui/selenium-screenshot*
 atdd/ui/log.html
