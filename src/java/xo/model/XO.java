@@ -64,4 +64,12 @@ public class XO {
     public void setCurrentPlayer(String currentPlayer) {
         this.currentPlayer = currentPlayer;
     }
+
+    public void nextPlayer() {
+        if(this.currentPlayer.equals("X")){
+            setCurrentPlayer("O");
+        }else{
+            setCurrentPlayer("X");
+        }        
+    }
 }
