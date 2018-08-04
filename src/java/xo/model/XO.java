@@ -18,6 +18,15 @@ public class XO {
     private String[][] board;
     private String currentPlayer;
 
+    public XO() {
+        this.player1Score = 0;
+        this.player2Score = 0;
+        this.tieScore = 0;
+        this.turn = 0;
+        this.currentPlayer = "X";
+        createEmptyBoard();
+    }
+
     public int getPlayer1Score() {
         return player1Score;
     }
@@ -65,8 +74,41 @@ public class XO {
     public void setCurrentPlayer(String currentPlayer) {
         this.currentPlayer = currentPlayer;
     }
-
+  
     public void markField(int row, int col) {
         board[row][col] = currentPlayer;
+    }
+    
+    public void createEmptyBoard() {
+        this.board = new String[3][3];
+    }
+  
+    public boolean checkHorizontalWin() {
+        for(int i=0;i<3;i++) {
+            if(this.board[i][0] != null && this.board[i][0].equals(this.board[i][1]) && this.board[i][1].equals(this.board[i][2])) {
+                return true;
+            }
+        }
+        return false;
+    }
+  
+    public void increasePlayerScore() {
+        if (currentPlayer == "X") {
+            player1Score++;
+        } else {
+            player2Score++;
+        }
+    }
+  
+    public void nextPlayer() {
+        if (this.currentPlayer.equals("X")) {
+            setCurrentPlayer("O");
+        } else {
+            setCurrentPlayer("X");
+        }
+    }
+
+    public void increseTurn() {
+        this.turn += 1;
     }
 }

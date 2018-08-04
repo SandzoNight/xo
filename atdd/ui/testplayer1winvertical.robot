@@ -2,7 +2,7 @@
 Library    SeleniumLibrary
 
 *** Variables ***
-${URL}    http://localhost:8080/doge/index.jsp
+${URL}    http://localhost:8080/doge/Game
 ${BROWSER}    chrome
 
 *** Test Cases ***

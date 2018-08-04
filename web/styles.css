@@ -1,0 +1,59 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Aug 4, 2018, 12:51:21 PM
+    Author     : WindowS
+*/
+
+body {
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: 80%;
+    flex-direction: column;
+}
+
+.heading {
+    flex: 2;
+}
+
+.heading h1 {
+    color: #FFF;
+    text-align: center;
+}
+
+.board {
+    display: flex;
+    flex: 7;
+}
+
+.table {
+    margin: 0 auto;
+}
+
+.mark {
+    width: 100px;
+    height: 100px;
+    border: #FFF solid 1px;
+}
+
+.score {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+}
+
+.player {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    color: #FFF;
+}
