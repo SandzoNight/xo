@@ -10,6 +10,7 @@ package xo.model;
  * @author sgnsys3
  */
 public class XO {
+
     private int player1Score;
     private int player2Score;
     private int tieScore;
@@ -63,5 +64,9 @@ public class XO {
 
     public void setCurrentPlayer(String currentPlayer) {
         this.currentPlayer = currentPlayer;
+    }
+
+    public void markField(int row, int col) {
+        board[row][col] = currentPlayer;
     }
 }
