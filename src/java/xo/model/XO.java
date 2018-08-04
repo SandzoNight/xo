@@ -23,6 +23,7 @@ public class XO {
         this.player2Score = 0;
         this.tieScore = 0;
         this.turn = 0;
+        this.currentPlayer = "X";
         createEmptyBoard();
     }
 
