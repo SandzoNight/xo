@@ -26,10 +26,6 @@ public class GameServlet extends HttpServlet {
         XO game = new XO();
         session.setAttribute("game", game);
         
-        System.out.println("--------------------------------");
-        System.out.println("game" + game.getPlayer1Score());
-        System.out.println("--------------------------------");
-        
         getServletContext().getRequestDispatcher("/index.jsp").forward(request, response);
         
     }
@@ -37,6 +33,22 @@ public class GameServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        String choose = request.getParameter("choose");
+        int row = Integer.parseInt(choose.substring(0, 1));
+        int column = Integer.parseInt(choose.substring(1, 2));
+        HttpSession session = request.getSession(true);
+        XO game = (XO)session.getAttribute("game");
+        game.increseTurn();
+        game.markField(row, column);
+        if (game.checkHorizontalWin()) {
+            game.increasePlayerScore();
+            game.setTurnToZero();
+            game.createEmptyBoard();
+            game.setCurrentPlayer("X");
+            getServletContext().getRequestDispatcher("/index.jsp").forward(request, response);
+        }
+        game.nextPlayer();
+        getServletContext().getRequestDispatcher("/index.jsp").forward(request, response);
     }
     
     @Override

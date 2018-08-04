@@ -18,23 +18,70 @@
                 <h1>Tic-Tac-Toe</h1>
             </div>
             <div class="board">
-                <table class="table">
-                    <tr>
-                        <td class="mark" id="R1_C1"></td>
-                        <td class="mark" id="R1_C2"></td>
-                        <td class="mark" id="R1_C3"></td>
-                    </tr>
-                    <tr>
-                        <td class="mark" id="R2_C1"></td>
-                        <td class="mark" id="R2_C2"></td>
-                        <td class="mark" id="R2_C3"></td>
-                    </tr>
-                    <tr>
-                        <td class="mark" id="R3_C1"></td>
-                        <td class="mark" id="R3_C2"></td>
-                        <td class="mark" id="R3_C3"></td>
-                    </tr>
-                </table>
+                <form method="post" action="/doge/Game">
+                    <table class="table">
+                        <tr>
+                            <td class="mark" id="R1_C1">
+                                ${game.board[0][0] == null
+                                  ? '<button name="choose" value="00" type="submit">เลือก</button>'
+                                  : game.board[0][0]
+                                }
+                            </td>
+                            <td class="mark" id="R1_C2">
+                                ${game.board[0][1] == null
+                                  ? '<button name="choose" value="01" type="submit">เลือก</button>'
+                                  : game.board[0][1]
+                                }
+                            </td>
+                            <td class="mark" id="R1_C3">
+                                ${game.board[0][2] == null
+                                  ? '<button name="choose" value="02" type="submit">เลือก</button>'
+                                  : game.board[0][2]
+                                }
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mark" id="R2_C1">
+                                ${game.board[1][0] == null
+                                  ? '<button name="choose" value="10" type="submit">เลือก</button>'
+                                  : game.board[1][0]
+                                }
+                            </td>
+                            <td class="mark" id="R2_C2">
+                                ${game.board[1][1] == null
+                                  ? '<button name="choose" value="11" type="submit">เลือก</button>'
+                                  : game.board[1][1]
+                                }
+                            </td>
+                            <td class="mark" id="R2_C3">
+                                ${game.board[1][2] == null
+                                  ? '<button name="choose" value="12" type="submit">เลือก</button>'
+                                  : game.board[1][2]
+                                }
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mark" id="R3_C1">
+                                ${game.board[2][0] == null
+                                  ? '<button name="choose" value="20" type="submit">เลือก</button>'
+                                  : game.board[2][0]
+                                }
+                            </td>
+                            <td class="mark" id="R3_C2">
+                                ${game.board[2][1] == null
+                                  ? '<button name="choose" value="21" type="submit">เลือก</button>'
+                                  : game.board[2][1]
+                                }
+                            </td>
+                            <td class="mark" id="R3_C3">
+                                ${game.board[2][2] == null
+                                  ? '<button name="choose" value="22" type="submit">เลือก</button>'
+                                  : game.board[2][2]
+                                }
+                            </td>
+                        </tr>
+                    </table>
+                <form>
             </div>
             <div class="score">
                 <div class="player">
