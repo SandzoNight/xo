@@ -17,7 +17,7 @@ public class TestSetTurnToZero {
     @Test
     public void setTurnToZero(){
         XO xo=new XO();
-        xo.setTurn(0);
+        xo.setTurnToZero();
         Assert.assertEquals(0, xo.getTurn());
         
     } 
