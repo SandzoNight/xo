@@ -12,6 +12,7 @@ body {
     background-color: #333;
     display: flex;
     justify-content: center;
+    font-family: Arial;
 }
 
 .container {
@@ -61,12 +62,17 @@ table tr th:last-child {
 }
 
 .mark {
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
+    color: #3333ff;
+    text-align: center;
+    font-size: 80px;
+    font-family: Arial;
     /*border: #FFF solid 1px;*/
 }
 
 .score {
+    margin-top: 40px;
     display: flex;
     flex: 1;
     flex-direction: row;
@@ -79,4 +85,7 @@ table tr th:last-child {
     flex-direction: column;
     text-align: center;
     color: #FFF;
+}
+.player div:first-child {
+    font-size: 20px;
 }
