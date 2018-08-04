@@ -12,6 +12,7 @@ body {
     background-color: #333;
     display: flex;
     justify-content: center;
+    font-family: Arial;
 }
 
 .container {
@@ -61,11 +62,12 @@ table tr th:last-child {
 }
 
 .mark {
-    width: 100px;
-    height: 100px;
-    color: #FFF;
+    width: 120px;
+    height: 120px;
+    color: #3333ff;
     text-align: center;
-    font-size: 48px;
+    font-size: 80px;
+    font-family: Arial;
     /*border: #FFF solid 1px;*/
 }
 
