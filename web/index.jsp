@@ -18,7 +18,7 @@
                 <h1>Tic-Tac-Toe</h1>
             </div>
             <div class="board">
-                <table>
+                <table class="table">
                     <tr>
                         <td class="mark" id="R1_C1"></td>
                         <td class="mark" id="R1_C2"></td>
@@ -38,19 +38,16 @@
             </div>
             <div class="score">
                 <div class="player">
-                    Player1 (X)
-                    <br>
-                    <label id="player1Score"></label>
+                    <div>Player1 (X)</div>
+                    <div id="player1Score">${game.player1Score}</div>
                 </div>
                 <div class="player">
-                    Tie
-                    <br>
-                    <label id="tieScore"></label>
+                    <div>Tie</div>
+                    <div id="tieScore">${game.tieScore}</div>
                 </div>
                 <div class="player">
-                    Player2 (O)
-                    <br>
-                    <label id="player2Score"></label>
+                    <div>Player2 (O)</div>
+                    <div id="player2Score">${game.player2Score}</div>
                 </div>
             </div>
         </div>

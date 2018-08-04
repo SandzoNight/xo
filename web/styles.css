@@ -31,7 +31,10 @@ body {
 .board {
     display: flex;
     flex: 7;
-    padding: 0 25%;
+}
+
+.table {
+    margin: 0 auto;
 }
 
 .mark {
@@ -50,5 +53,7 @@ body {
     display: flex;
     flex: 1;
     justify-content: center;
+    flex-direction: column;
+    text-align: center;
     color: #FFF;
 }
