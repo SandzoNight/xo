@@ -75,6 +75,10 @@ public class XO {
         this.currentPlayer = currentPlayer;
     }
   
+    public void markField(int row, int col) {
+        board[row][col] = currentPlayer;
+    }
+  
     public void setTurnToZero() {
        this.turn=0;
     }
