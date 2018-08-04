@@ -64,4 +64,8 @@ public class XO {
     public void setCurrentPlayer(String currentPlayer) {
         this.currentPlayer = currentPlayer;
     }
+
+    public void setTurnToZero() {
+       this.turn=0;
+    }
 }
