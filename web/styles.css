@@ -14,7 +14,9 @@ body {
     justify-content: center;
     font-family: Arial;
 }
-
+form {
+    width:100%;
+}
 .container {
     width: 80%;
     flex-direction: column;
