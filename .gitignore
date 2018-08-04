@@ -1,5 +1,5 @@
 build
-nbproject/private/
+nbproject
 atdd/ui/selenium-screenshot*
 atdd/ui/log.html
 atdd/ui/output.xml
